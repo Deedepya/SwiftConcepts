@@ -6,7 +6,7 @@
 
 Pdfile for xcode 14.3
 
-'''
+```
 # Uncomment the next line to define a global platform for your project
 platform :ios, '11.0'
 
@@ -31,7 +31,7 @@ post_install do |installer|
    end
 end
 
-'''
+```
 
 Steps to create table in RealmDatabse
 1.Create instance for RealmDatabse. Use only one instance throughout the app then keep adding new tables (new class objects).
