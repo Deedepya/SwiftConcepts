@@ -13,8 +13,22 @@
 		3F1763CF2A633AFE00089337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1763CD2A633AFE00089337 /* Main.storyboard */; };
 		3F1763D12A633B0000089337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1763D02A633B0000089337 /* Assets.xcassets */; };
 		3F1763D42A633B0000089337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1763D22A633B0000089337 /* LaunchScreen.storyboard */; };
+		3F1763DE2A63579100089337 /* ProfileRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1763DD2A63579100089337 /* ProfileRealmModel.swift */; };
+		3F1763E02A63588800089337 /* RealmDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1763DF2A63588800089337 /* RealmDatabaseManager.swift */; };
+		3F1763E82A635F0C00089337 /* RealmSwiftAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1763E72A635F0C00089337 /* RealmSwiftAppTests.swift */; };
+		3F1763F12A635F8900089337 /* DatabaseCrudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1763F02A635F8900089337 /* DatabaseCrudTests.swift */; };
 		7D4674FF88B1D68B53D83E4C /* Pods_RealmSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A1F16CEF52F4CDCB4E36EB /* Pods_RealmSwiftApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F1763E92A635F0C00089337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F1763BC2A633AFE00089337 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F1763C32A633AFE00089337;
+			remoteInfo = RealmSwiftApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3F1763C42A633AFE00089337 /* RealmSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +39,11 @@
 		3F1763D02A633B0000089337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F1763D32A633B0000089337 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F1763D52A633B0000089337 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1763DD2A63579100089337 /* ProfileRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRealmModel.swift; sourceTree = "<group>"; };
+		3F1763DF2A63588800089337 /* RealmDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabaseManager.swift; sourceTree = "<group>"; };
+		3F1763E52A635F0C00089337 /* RealmSwiftAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmSwiftAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1763E72A635F0C00089337 /* RealmSwiftAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSwiftAppTests.swift; sourceTree = "<group>"; };
+		3F1763F02A635F8900089337 /* DatabaseCrudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCrudTests.swift; sourceTree = "<group>"; };
 		664C08EEB0E2679D547AC5BD /* Pods-RealmSwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmSwiftApp.release.xcconfig"; path = "Target Support Files/Pods-RealmSwiftApp/Pods-RealmSwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		94A1F16CEF52F4CDCB4E36EB /* Pods_RealmSwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmSwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAECB865FAD44D942F5A085F /* Pods-RealmSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmSwiftApp.debug.xcconfig"; path = "Target Support Files/Pods-RealmSwiftApp/Pods-RealmSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -39,6 +58,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3F1763E22A635F0C00089337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				3F1763C62A633AFE00089337 /* RealmSwiftApp */,
+				3F1763E62A635F0C00089337 /* RealmSwiftAppTests */,
 				3F1763C52A633AFE00089337 /* Products */,
 				C53F1F79491101F85EF892F3 /* Pods */,
 				AE295C6C129333AABBC511F3 /* Frameworks */,
@@ -56,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				3F1763C42A633AFE00089337 /* RealmSwiftApp.app */,
+				3F1763E52A635F0C00089337 /* RealmSwiftAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,12 +94,23 @@
 				3F1763C72A633AFE00089337 /* AppDelegate.swift */,
 				3F1763C92A633AFE00089337 /* SceneDelegate.swift */,
 				3F1763CB2A633AFE00089337 /* ViewController.swift */,
+				3F1763DD2A63579100089337 /* ProfileRealmModel.swift */,
+				3F1763DF2A63588800089337 /* RealmDatabaseManager.swift */,
 				3F1763CD2A633AFE00089337 /* Main.storyboard */,
 				3F1763D02A633B0000089337 /* Assets.xcassets */,
 				3F1763D22A633B0000089337 /* LaunchScreen.storyboard */,
 				3F1763D52A633B0000089337 /* Info.plist */,
 			);
 			path = RealmSwiftApp;
+			sourceTree = "<group>";
+		};
+		3F1763E62A635F0C00089337 /* RealmSwiftAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F1763E72A635F0C00089337 /* RealmSwiftAppTests.swift */,
+				3F1763F02A635F8900089337 /* DatabaseCrudTests.swift */,
+			);
+			path = RealmSwiftAppTests;
 			sourceTree = "<group>";
 		};
 		AE295C6C129333AABBC511F3 /* Frameworks */ = {
@@ -88,7 +127,6 @@
 				AAECB865FAD44D942F5A085F /* Pods-RealmSwiftApp.debug.xcconfig */,
 				664C08EEB0E2679D547AC5BD /* Pods-RealmSwiftApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -114,6 +152,24 @@
 			productReference = 3F1763C42A633AFE00089337 /* RealmSwiftApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3F1763E42A635F0C00089337 /* RealmSwiftAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1763EB2A635F0C00089337 /* Build configuration list for PBXNativeTarget "RealmSwiftAppTests" */;
+			buildPhases = (
+				3F1763E12A635F0C00089337 /* Sources */,
+				3F1763E22A635F0C00089337 /* Frameworks */,
+				3F1763E32A635F0C00089337 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F1763EA2A635F0C00089337 /* PBXTargetDependency */,
+			);
+			name = RealmSwiftAppTests;
+			productName = RealmSwiftAppTests;
+			productReference = 3F1763E52A635F0C00089337 /* RealmSwiftAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -126,6 +182,10 @@
 				TargetAttributes = {
 					3F1763C32A633AFE00089337 = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					3F1763E42A635F0C00089337 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 3F1763C32A633AFE00089337;
 					};
 				};
 			};
@@ -143,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				3F1763C32A633AFE00089337 /* RealmSwiftApp */,
+				3F1763E42A635F0C00089337 /* RealmSwiftAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +216,13 @@
 				3F1763D42A633B0000089337 /* LaunchScreen.storyboard in Resources */,
 				3F1763D12A633B0000089337 /* Assets.xcassets in Resources */,
 				3F1763CF2A633AFE00089337 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1763E32A635F0C00089337 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,12 +276,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F1763CC2A633AFE00089337 /* ViewController.swift in Sources */,
+				3F1763DE2A63579100089337 /* ProfileRealmModel.swift in Sources */,
+				3F1763E02A63588800089337 /* RealmDatabaseManager.swift in Sources */,
 				3F1763C82A633AFE00089337 /* AppDelegate.swift in Sources */,
 				3F1763CA2A633AFE00089337 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3F1763E12A635F0C00089337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1763F12A635F8900089337 /* DatabaseCrudTests.swift in Sources */,
+				3F1763E82A635F0C00089337 /* RealmSwiftAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F1763EA2A635F0C00089337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F1763C32A633AFE00089337 /* RealmSwiftApp */;
+			targetProxy = 3F1763E92A635F0C00089337 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3F1763CD2A633AFE00089337 /* Main.storyboard */ = {
@@ -405,6 +492,40 @@
 			};
 			name = Release;
 		};
+		3F1763EC2A635F0C00089337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iOS.Deedeepya.com.RealmSwiftAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealmSwiftApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RealmSwiftApp";
+			};
+			name = Debug;
+		};
+		3F1763ED2A635F0C00089337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = iOS.Deedeepya.com.RealmSwiftAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RealmSwiftApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RealmSwiftApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -422,6 +543,15 @@
 			buildConfigurations = (
 				3F1763D92A633B0000089337 /* Debug */,
 				3F1763DA2A633B0000089337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F1763EB2A635F0C00089337 /* Build configuration list for PBXNativeTarget "RealmSwiftAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1763EC2A635F0C00089337 /* Debug */,
+				3F1763ED2A635F0C00089337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
