@@ -8,6 +8,7 @@
 import Foundation
 import RealmSwift
 
+
 enum RealmError: Error {
     case noMatchError
 }
@@ -36,6 +37,26 @@ class RealmDatabaseManager {
         }
     }
     
+    func savebjectsInDB(_ objects: List<ProfileRealmModel>) {
+        guard let realmDb = realmDb else {
+            return
+        }
+        
+        objects.forEach { profile in
+            print(profile)
+            try! realmDb.write {
+                realmDb.add(profile)
+            }
+        }
+        
+//        ForEach(objects) { profile in
+//            print(profile)
+//            try! realmDb.write {
+//                realmDb.add(profile)
+//            }
+//        }
+    }
+    
     func deleteObjectFromDb(_ object: ProfileRealmModel) {
         guard let realmDb = realmDb else {
             return
@@ -46,12 +67,13 @@ class RealmDatabaseManager {
         }
     }
     
-    func updateInfo(_ field: String, updatedValue: String) throws {
+    func updateInfo(_ field: String, currentValue: String, updatedValue: String) throws {
         guard let realmDb = realmDb else {
             return
         }
         
-        let list = try getMatchedObjects(field, value: updatedValue) //here if error is thrown then error will be returned. Already 'getMatchedObjects' function is throwing, so need to again throw in current function
+        let list = try getMatchedObjects(field, value: currentValue) //here if error is thrown then error will be returned. Already 'getMatchedObjects' function is throwing, so need to again throw in current function
+        print(list)
         try! realmDb.write {
             list.setValue(updatedValue, forKey: "\(field)")
         }
@@ -63,15 +85,28 @@ class RealmDatabaseManager {
         }
         
         try! realmDb.write {
-            object.name = "hardcoded direct"
+            object.name = "hardCodedName"
         }
     }
     
     // MARK: - Read operations
-    func getMatchedObjects(_ field: String, value: String) throws -> Results<ProfileRealmModel> {
+    func getMatchedObjects<T>(_ field: String, value: T) throws -> Results<ProfileRealmModel> {
         if (realmDb != nil) {
-            let predicate = NSPredicate(format: "%K = %@", field, value)
-            return realmDb!.objects(ProfileRealmModel.self).filter(predicate)
+            if let value = value as? Int {
+                let predicate = NSPredicate(format: "%K = %d", field, value)
+                return realmDb!.objects(ProfileRealmModel.self).filter(predicate)
+            } else if let value = value as? String {
+                let predicate = NSPredicate(format: "%K = %@", field, value)
+                return realmDb!.objects(ProfileRealmModel.self).filter(predicate)
+            }
+            return realmDb!.objects(ProfileRealmModel.self)
+//            let predicate = NSPredicate(format: "%K = %@", field, value)
+//            let list = realmDb!.objects(ProfileRealmModel.self)
+//            //let matches = list.where { $0.name == value as! String }
+//            let matches = list.where { $0.rating == value as! Int }
+//            print(matches)
+//            return matches
+            //return realmDb!.objects(ProfileRealmModel.self).filter(predicate)
         } else {
             throw RealmError.noMatchError
         }
