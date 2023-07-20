@@ -91,6 +91,15 @@ class RealmDatabaseManager {
     
     // MARK: - Read operations
     func getMatchedObjects<T>(_ field: String, value: T) throws -> Results<ProfileRealmModel> {
+        /*
+         https://medium.com/@gonzalezreal/using-realm-with-value-types-b69947741e8b
+         --above articel contains in depth details of realm
+         https://stackoverflow.com/questions/67380208/how-to-convert-an-array-to-list-in-realm
+         https://www.mongodb.com/docs/realm/sdk/swift/model-data/supported-types/
+         https://www.mongodb.com/developer/products/realm/realm-swift-query-api/
+         
+         */
+       
         if (realmDb != nil) {
             if let value = value as? Int {
                 let predicate = NSPredicate(format: "%K = %d", field, value)
