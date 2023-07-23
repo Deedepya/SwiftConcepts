@@ -1,4 +1,4 @@
-# SwiftConcepts changes 2
+# SwiftConcepts
 
 # RealmSwiftApp
 
