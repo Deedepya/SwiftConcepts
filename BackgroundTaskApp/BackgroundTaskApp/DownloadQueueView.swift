@@ -46,6 +46,9 @@ struct DownloadQueueView: View {
     //---added new comment for testing reset
     //---added new comment for testing reset
     //---added new comment for testing reset
+    
+    //---added new comment for testing reset1
+    //---added new comment for testing reset1
     func startDownload() {
         downloadManager.downloadAll()
     }
