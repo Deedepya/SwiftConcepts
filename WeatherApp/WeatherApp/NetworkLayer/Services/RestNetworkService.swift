@@ -84,6 +84,28 @@ protocol RestNetworkService: RestURLRequest {
     func request<Request: DataRequest>(_ serviceInfo: Request, completion: @escaping (Result<Request.DataModel, ServiceError>) -> Void)
 }
 
+//struct mockCitiesObject: CitiesModel {
+//
+//    required init(from decoder: Decoder) throws {
+//        try super.init(from: decoder)
+//        self.citiesList = ["Hyderabad", "secunderabad", "Delhi", "mumbai", "pune"]
+//    }
+//}
+
+final class DefaultRestNetworkServiceMock: RestNetworkService {
+    
+    func request<Request: DataRequest> (_ serviceInfo: Request, completion: @escaping ( Result<Request.DataModel, ServiceError> ) -> Void) {
+       // return completion(.failure(.badURL))
+        
+        do {
+            let citiesList = ["Hyderabad", "secunderabad", "Delhi", "mumbai", "pune"]
+            try completion(.success(citiesList))
+        } catch let parseError {
+            completion(.failure(.parseError(parseError.localizedDescription)))
+        }
+    }
+}
+
 final class DefaultRestNetworkService: RestNetworkService {
 
     func request<Request: DataRequest> (_ serviceInfo: Request, completion: @escaping ( Result<Request.DataModel, ServiceError> ) -> Void) {

@@ -32,6 +32,10 @@ class WeatherViewModel: ObservableObject {
     
     init(networkService: RestNetworkService) {
         self.networkService = networkService
+        initialSetUp()
+    }
+    
+    func initialSetUp() {
         featchAllCities()
     }
     
@@ -50,6 +54,29 @@ class WeatherViewModel: ObservableObject {
                     print("failed, to get cities")
                 }
             }
+        }
+    }
+    
+    //passes networkServiceMock --> so for its request, completion will come back soon after callign and its syncrhonous
+    //in completion result --> cities list will be return
+    //after success see if citiesList is getting update, if failure citiesList should be empty
+    
+        /*
+         see how you can test with main.sync
+         then see how you can test with original method, but just by changing service to mock
+         then see how to use original service only and test and if we can really do it
+         */
+    private func featchAllCitiesMock() {
+        let citiesService = GetCitiesService()
+        networkService.request(citiesService) { [weak self] result in
+            //DispatchQueue.main.async {
+                switch result {
+                case .success(let citiesModel):
+                    self?.citiesList = citiesModel.data
+                case .failure(_):
+                    print("failed, to get cities")
+                }
+           // }
         }
     }
     

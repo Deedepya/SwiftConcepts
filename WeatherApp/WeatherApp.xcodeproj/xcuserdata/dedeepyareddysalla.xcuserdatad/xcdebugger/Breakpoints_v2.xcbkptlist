@@ -14,8 +14,8 @@
             filePath = "WeatherApp/Weather/ViewModel/WeatherViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "featchAllCities()"
             landmarkType = "7">
             <Locations>
@@ -77,8 +77,8 @@
             filePath = "WeatherApp/NetworkLayer/Services/RestNetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "request(_:completion:)"
             landmarkType = "7">
          </BreakpointContent>

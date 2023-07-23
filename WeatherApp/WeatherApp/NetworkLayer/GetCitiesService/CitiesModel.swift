@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CitiesModel: Codable {
+class CitiesModel: Codable {
     let error: Bool
     let msg: String
     let data: [String]
